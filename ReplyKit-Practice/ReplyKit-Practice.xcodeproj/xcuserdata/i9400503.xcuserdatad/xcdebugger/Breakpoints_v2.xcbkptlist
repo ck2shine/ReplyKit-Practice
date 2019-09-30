@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "938B6FF2-D974-45E9-B7F8-A3095415B7DE"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B04E7BF1-C011-42E9-8FE7-F8CFB2251AE9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReplyKit-Practice/viewcontrollers/BrRecorderViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "RecordButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B277B360-7643-48F1-AE03-5D4F23309BD7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReplyKit-Practice/viewcontrollers/BrRecorderViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "startRecord()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E7D2866B-C7BA-4027-8F1A-95107729688B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReplyKit-Practice/viewcontrollers/BrRecorderViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "RecordButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3BF2B070-4936-4FC1-A97E-D0E5DAA57BBF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReplyKit-Practice/viewcontrollers/BrRecorderViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
+            landmarkName = "configurationVideoSession()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B0330FE-4604-4DE0-AFAA-186A72210A8F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReplyKit-Practice/viewcontrollers/BrRecorderViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "startRecord()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB80AACB-B0CC-4822-9472-BC52F429C17F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReplyKit-Practice/videoProcess/VideoAssertWrtitter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "writeToAssert(buffer:bufferKind:fileFrame:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BB80AACB-B0CC-4822-9472-BC52F429C17F - be4a360adf996cdb"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReplyKit_Practice.VideoAssertWrtitter.writeToAssert(buffer: __C.CMSampleBufferRef, bufferKind: __C.RPSampleBufferType, fileFrame: __C.CGRect) -&gt; ()"
+                  moduleName = "ReplyKit-Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/i9400503/Documents/internetProject/ReplyKit-Practice/ReplyKit-Practice/ReplyKit-Practice/videoProcess/VideoAssertWrtitter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "BB80AACB-B0CC-4822-9472-BC52F429C17F - 62b5ed146b5b0056"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in ReplyKit_Practice.VideoAssertWrtitter.writeToAssert(buffer: __C.CMSampleBufferRef, bufferKind: __C.RPSampleBufferType, fileFrame: __C.CGRect) -&gt; ()"
+                  moduleName = "ReplyKit-Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/i9400503/Documents/internetProject/ReplyKit-Practice/ReplyKit-Practice/ReplyKit-Practice/videoProcess/VideoAssertWrtitter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "240">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E02FBD5C-880D-4574-A0E5-7E0D3A41E392"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReplyKit-Practice/videoProcess/VideoAssertWrtitter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "writeToAssert(buffer:bufferKind:fileFrame:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27EA035C-89A7-41B5-80B1-D3FADE64C11A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReplyKit-Practice/viewcontrollers/BrRecorderViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "stopRecord()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "623A9906-0967-4AF6-A29F-C3547675CB9A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReplyKit-Practice/viewcontrollers/BrRecorderViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "RecordButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3530DFFC-C229-4ABE-ADEE-6E9D1909B1EC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReplyKit-Practice/videoProcess/VideoAssertWrtitter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "finish()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3530DFFC-C229-4ABE-ADEE-6E9D1909B1EC - e96fe8f5aa3ce5f0"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReplyKit_Practice.VideoAssertWrtitter.finish() -&gt; ()"
+                  moduleName = "ReplyKit-Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/i9400503/Documents/internetProject/ReplyKit-Practice/ReplyKit-Practice/ReplyKit-Practice/videoProcess/VideoAssertWrtitter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "3530DFFC-C229-4ABE-ADEE-6E9D1909B1EC - 26970ae0d87236ec"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in ReplyKit_Practice.VideoAssertWrtitter.finish() -&gt; ()"
+                  moduleName = "ReplyKit-Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/i9400503/Documents/internetProject/ReplyKit-Practice/ReplyKit-Practice/ReplyKit-Practice/videoProcess/VideoAssertWrtitter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28F62D5E-B226-4AB5-853B-5CB518056DB1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReplyKit-Practice/videoProcess/VideoAssertWrtitter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "finish()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "28F62D5E-B226-4AB5-853B-5CB518056DB1 - 26970ae0d87236ec"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in ReplyKit_Practice.VideoAssertWrtitter.finish() -&gt; ()"
+                  moduleName = "ReplyKit-Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/i9400503/Documents/internetProject/ReplyKit-Practice/ReplyKit-Practice/ReplyKit-Practice/videoProcess/VideoAssertWrtitter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "28F62D5E-B226-4AB5-853B-5CB518056DB1 - 5ddd66a1e92ef512"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in ReplyKit_Practice.VideoAssertWrtitter.finish() -&gt; ()"
+                  moduleName = "ReplyKit-Practice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/i9400503/Documents/internetProject/ReplyKit-Practice/ReplyKit-Practice/ReplyKit-Practice/videoProcess/VideoAssertWrtitter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0BFAB84-D02C-4F04-AAB3-8E7F37CE9CC0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReplyKit-Practice/videoProcess/VideoAssertWrtitter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "configurationWritterAssert(buffer:fileFrame:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55E0E30F-B9D6-4E37-AF28-21A42751F3F5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReplyKit-Practice/videoProcess/VideoAssertWrtitter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "finish()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
