@@ -8,7 +8,7 @@
 
 import Foundation
 import ReplayKit
-
+import AVFoundation
 class VideoAssertWrtitter{
 
     private var writter: AVAssetWriter?
@@ -96,6 +96,7 @@ extension VideoAssertWrtitter{
             print("setup audioInput format failed")
             return
         }
+        
 
         let audioSetting : [String : Any] = [
             AVFormatIDKey : kAudioFormatMPEG4AAC,
@@ -128,3 +129,4 @@ extension VideoAssertWrtitter{
         }
     }
 }
+

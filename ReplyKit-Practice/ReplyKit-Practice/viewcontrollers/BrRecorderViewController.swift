@@ -10,14 +10,13 @@ import UIKit
 import ReplayKit
 class BrRecorderViewController: UIViewController {
 
-    private let session = AVCaptureSession()
-
     private let writter = VideoAssertWrtitter()
-    let recorder = RPScreenRecorder.shared()
 
     let videoQuere = DispatchQueue(label: "videoQuere")
     private var isVideoSessionRunning = false
     private var isAuthForVideo = true
+
+    private var recorder = RPScreenRecorder.shared()
 
     private var isRecording = false
 
@@ -30,55 +29,16 @@ class BrRecorderViewController: UIViewController {
 
     @IBOutlet weak var RecordTimer: UILabel!
 
-    @IBOutlet weak var cameraPreview: CameraPrewview!
+    @IBOutlet weak var cameraPreview: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         initView()
 
-        switch AVCaptureDevice.authorizationStatus(for: .video) {
-        case .authorized:
-            break
-        case .notDetermined:
-            videoQuere.suspend()
-            AVCaptureDevice.requestAccess(for: .video) { (authDone) in
-                if !authDone
-                {
-                    self.isAuthForVideo = false
-                }
-                self.videoQuere.resume()
-            }
-        default:
-            self.isAuthForVideo = false
-        }
-
-        videoQuere.async {
-            self.configurationVideoSession()
-        }
-
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        videoQuere.async {
-            self.isVideoSessionRunning = true
-            self.session.startRunning()
-        }
 
-        super.viewWillAppear(animated)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        videoQuere.async {
-            if self.isVideoSessionRunning
-            {
-                self.session.stopRunning()
-            }
-
-        }
-        super.viewWillDisappear(animated)
-
-    }
 
     @IBAction func RecordButton(_ sender: UIButton) {
 
@@ -109,56 +69,83 @@ class BrRecorderViewController: UIViewController {
 //MARK: Record funciton
 extension BrRecorderViewController{
     private func startRecord(){
-        guard recorder.isAvailable else {
-            
-            alertErrorMessage("Device doesn`t support Record function !")
-            
-            return
-        }
-        
-        
-        
-        recorder.isMicrophoneEnabled = true
+        //        guard RPScreenRecorder.shared().isAvailable else {
+        //
+        //            alertErrorMessage("Device doesn`t support Record function !")
+        //
+        //            return
+        //        }
+        //
+        //        self.recorder.isMicrophoneEnabled = true
+        //        self.recorder.isCameraEnabled = true
+        //        self.recorder.cameraPosition = .front
+        //
+        //        let bounds = self.cameraPreview.bounds
+        //
+        //        //available in ios11
+        //        RPScreenRecorder.shared().startCapture(handler: { [unowned self](bufer, rssmapleBuffer, error) in
+        //
+        //            self.writter.writeToAssert(buffer: bufer, bufferKind: rssmapleBuffer, fileFrame: bounds)
+        //
+        //        }) { (error) in
+        //
+        //            guard  error == nil else
+        //            {
+        //                DispatchQueue.main.async {
+        //                    self.alertErrorMessage("records with something error : \(error?.localizedDescription ?? "")")
+        //                }
+        //                return
+        //            }
+        //            DispatchQueue.main.async {
+        //
+        //                self.recorder.cameraPreviewView?.frame.size = self.cameraPreview.bounds.size
+        //                self.recorder.cameraPreviewView?.frame.origin = CGPoint(x: 0, y: 0)
+        //
+        //                self.cameraPreview.addSubview(   self.recorder.cameraPreviewView!)
+        //                self.isRecording = true
+        //                self.showInfoView(self.isRecording)
+        //            }
+        //        }
 
-        //writeToAlbum
-        let bounds = self.cameraPreview.bounds
+
+        self.recorder.isMicrophoneEnabled = true
+        self.recorder.isCameraEnabled = true
+        self.recorder.cameraPosition = .front
+        recorder.startRecording { [unowned self](error) in
 
 
 
-        //available in ios11
-        recorder.startCapture(handler: { [unowned self](bufer, rssmapleBuffer, error) in
-
-            self.writter.writeToAssert(buffer: bufer, bufferKind: rssmapleBuffer, fileFrame: bounds)
-
-
-        }) { (error) in
-
-            guard  error == nil else
+            guard error == nil else
             {
-                DispatchQueue.main.async {
-                    self.alertErrorMessage("records with something error : \(error?.localizedDescription ?? "")")
-                }
+                self.alertErrorMessage("records with something error : \(error?.localizedDescription ?? "")")
                 return
             }
+            DispatchQueue.main.async {
 
-            self.isRecording = true
+                self.recorder.cameraPreviewView?.frame.size = self.cameraPreview.bounds.size
+                self.recorder.cameraPreviewView?.frame.origin = CGPoint(x: 0, y: 0)
+
+                self.cameraPreview.addSubview(   self.recorder.cameraPreviewView!)
+                self.isRecording = true
+                self.showInfoView(self.isRecording)
+            }
+
         }
-
-        /*
-         recorder.startRecording { [unowned self](error) in
-
-         guard error == nil else
-         {
-         self.alertErrorMessage("records with something error : \(error?.localizedDescription ?? "")")
-         return
-         }
-
-         self.isRecording = true
-         self.showInfoView(self.isRecording)
-         }*/
     }
     private func stopRecord(){
-        recorder.stopCapture { [unowned self](error) in
+        //        self.recorder.stopCapture { [unowned self](error) in
+        //            guard error == nil else
+        //            {
+        //                DispatchQueue.main.async {
+        //                    self.alertErrorMessage(error?.localizedDescription ?? "error with stop Capture")
+        //                }
+        //                return
+        //            }
+        //            self.writter.finish()
+        //            self.isRecording = false
+        //        }
+
+        self.recorder.stopRecording { (preview, error) in
             guard error == nil else
             {
                 DispatchQueue.main.async {
@@ -166,34 +153,20 @@ extension BrRecorderViewController{
                 }
                 return
             }
-            self.writter.finish()
             self.isRecording = false
+            DispatchQueue.main.async {
+                self.recorder.cameraPreviewView?.removeFromSuperview()
+                preview?.previewControllerDelegate = self
+                self.present(preview!, animated: true)
+            }
         }
-        /*
-         //this is only for ios10
-         recorder.stopRecording { [unowned self](preview, error) in
-         self.isRecording = false
-         self.showInfoView(self.isRecording)
-         guard let preview = preview else
-         {
-         print("there is not any preview")
-         return
-         }
-         preview.previewControllerDelegate = self
-         self.present(preview, animated: true)
-
-
-         self.writter.finish()
-         }*/
     }
-
-
 }
 
 extension BrRecorderViewController{
     private func initView(){
         self.RecordButtonStatue.layer.cornerRadius = self.RecordButtonStatue.bounds.width / 2
-        self.cameraPreview.session = session
+
     }
     
     private func alertErrorMessage(_ errMsg : String){
@@ -222,54 +195,6 @@ extension BrRecorderViewController{
     }
 }
 
-extension BrRecorderViewController {
-    private func configurationVideoSession()
-    {
-        guard isAuthForVideo else {
-            return
-        }
-
-        //set up set session input mode
-        session.beginConfiguration()
-
-        session.sessionPreset = .photo
-
-
-        do
-        {
-            let defaultViedoDevice = AVCaptureDevice.default( .builtInWideAngleCamera ,for: .video , position:  . front)
-
-            guard let viedoDevice = defaultViedoDevice else
-            {
-                session.commitConfiguration()
-                return
-            }
-
-            let videoDeviceInput = try AVCaptureDeviceInput(device: viedoDevice)
-
-            if session.canAddInput(videoDeviceInput)
-            {
-                session.addInput(videoDeviceInput)
-                self.videoDeviceInput = videoDeviceInput
-
-
-                DispatchQueue.main.async {
-                    let defaultOritation: AVCaptureVideoOrientation = .portrait
-                    self.cameraPreview.filmPreviewLayer.connection?.videoOrientation = defaultOritation
-                }
-
-
-            }
-        }
-        catch
-        {
-            print("configuration viedo Session with something error")
-            session.commitConfiguration()
-        }
-
-        session.commitConfiguration()
-    }
-}
 
 extension BrRecorderViewController : RPPreviewViewControllerDelegate
 {

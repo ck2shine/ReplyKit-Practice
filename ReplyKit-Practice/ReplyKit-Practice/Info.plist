@@ -45,5 +45,7 @@
 	<string>allow to access Photo Album</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>allow to access Photo Album</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>allow to access Microphone</string>
 </dict>
 </plist>
